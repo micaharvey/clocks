@@ -1,12 +1,12 @@
 svg.circle {
-	width: 80px;
-	height: 80px;
+    width: 80px;
+    height: 80px;
 }
 
 #clock-container {
-	    position: absolute;
-	    height: 80px;
-	    left: calc(50% - 40px);
+    position: absolute;
+    height: 80px;
+    left: calc(50% - 40px);
 }
 
 #hands {
@@ -18,7 +18,13 @@ svg.circle {
     bottom: 0;
 }
 
+#hands path {
+  stroke: currentColor;
+  stroke-width:6px;
+}
+
 svg.hour-hand{
+    color: black;
     height: 30px;
     position: absolute;
     top: 18px;
@@ -26,9 +32,18 @@ svg.hour-hand{
 }
 
 svg.minute-hand{
-	height: 60px;
-		display: block;
+    color: black;
+    height: 60px;
+    display: block;
     top: 3px;
     left: 16px;
     position: relative;
+}
+
+svg.second-hand{
+    color: red;
+    height: 60px;
+    position: absolute;
+    top: 3px;
+    left: 16px;
 }

@@ -1,15 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
   date: Date;
   dateTime: string;
   constructor() {
     this.updateTime();
+  }
+  ngAfterViewInit() {
+    this.updateTime();
+    this.updateClock();
     setInterval(this.loop.bind(this), 1000);
   }
   loop() {
@@ -29,5 +33,9 @@ export class AppComponent {
     var minutes = this.date.getMinutes();
     var minutesRotation = (360/60) * minutes;
     document.getElementsByClassName("minute-hand")[0].setAttribute("style", "transform: rotateZ("+minutesRotation+"deg);");
+    // get seconds, update hand
+    var seconds = this.date.getSeconds();
+    var secondsRotation = (360/60) * seconds;
+    document.getElementsByClassName("second-hand")[0].setAttribute("style", "transform: rotateZ("+secondsRotation+"deg); color: hsl("+secondsRotation+", 100%, 50%);");
   }
 }
