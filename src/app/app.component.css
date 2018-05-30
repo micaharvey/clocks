@@ -1,0 +1,34 @@
+svg.circle {
+	width: 80px;
+	height: 80px;
+}
+
+#clock-container {
+	    position: absolute;
+	    height: 80px;
+	    left: calc(50% - 40px);
+}
+
+#hands {
+    display: inline;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+svg.hour-hand{
+    height: 30px;
+    position: absolute;
+    top: 18px;
+    left: 28px;
+}
+
+svg.minute-hand{
+	height: 60px;
+		display: block;
+    top: 3px;
+    left: 16px;
+    position: relative;
+}
