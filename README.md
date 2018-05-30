@@ -2,9 +2,15 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.5.
 
+Followed steps [here](https://medium.com/@hellotunmbi/how-to-deploy-angular-application-to-heroku-1d56e09c5147) to upload to heroku, had to make a few changes.
+
+## Purpose
+
+Clocks, clocks, and more clocks.  Personal project for demonstration purposes.
+
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+`node server.js`
 
 ## Code scaffolding
 
